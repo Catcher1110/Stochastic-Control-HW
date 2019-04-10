@@ -41,7 +41,9 @@ for i = 2:timesteps
     % update the m&P
     x_plusV(:,i) = x_minusV(:,i)+KG*(z-H*x_minusV(:,i));
     p_plus(:,:,i) = p_minus(:,:,i)-KG*H*p_minus(:,:,i);
+    % store the P
     p_minus(:,:,i) = p_plus(:,:,i);
+    % calculate the sigma
     sigma_xV(i) = sqrt(p_plus(1,1,i));
 end
 
