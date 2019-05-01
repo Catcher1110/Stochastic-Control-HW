@@ -4,7 +4,7 @@ b = 0.1/0.01; % N-sec/m
 q = 0.1; % noise strength N^2/sec
 dt = 0.001; % time step sec
 timesteps = 1000;
-ensembles = 1000;
+ensembles = 10000;
 dbeta = randn(timesteps,ensembles)*sqrt(q*dt);
 % x,p for monte carlo simulation
 x = zeros(timesteps,ensembles);
